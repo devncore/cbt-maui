@@ -24,7 +24,10 @@
                 <Tab Title="즐겨찾기" Icon="information.png">
                     <ShellContent ContentTemplate="{DataTemplate page:AboutPage}"/>
                 </Tab>
-                <Tab Title="문제" Icon="cog.png">
+                <Tab Title="시험찾기" Icon="cog.png">
+                    <ShellContent ContentTemplate="{DataTemplate page:TestListPage}"/>
+                </Tab>
+                <Tab Title="더 보기" Icon="dots_horizontal.png">
                     <ShellContent ContentTemplate="{DataTemplate page:TestListPage}"/>
                 </Tab>
             </TabBar>

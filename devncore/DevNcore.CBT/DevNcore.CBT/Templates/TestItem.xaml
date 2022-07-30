@@ -2,24 +2,47 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DevNcore.CBT.Templates.TestItem">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup Name="CommonStates">
+            <VisualState Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Transparent" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState Name="Selected">
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="#ffce30" />
+                    <Setter TargetName="_label" Property="Label.TextColor" Value="#000000" />
+                    <Setter TargetName="_image" Property="Image.Source" Value="computer_over.png" />
+                    <Setter TargetName="_image2" Property="Image.IsVisible" Value="True" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
     <ContentView.Content>
-        <Border Padding="10, 4, 10, 4">
-            <Grid>
+            <Grid Padding="10, 6, 10, 6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="computer.png"
-                       WidthRequest="16"
-                       HeightRequest="16"
+                <Image x:Name="_image"
+                       Source="computer.png"
+                       WidthRequest="18"
+                       HeightRequest="18"
                        Margin="0, 0, 10, 0"/>
-                <Label Grid.Column="1"
+                <Label x:Name="_label"
+                       Grid.Column="1"
                        VerticalTextAlignment="Center"
+                       FontSize="Medium"
                        Text="{Binding Name}"/>
-                <RadioButton Grid.Column="2" BackgroundColor="Transparent"/>
+                <Image x:Name="_image2"
+                       Grid.Column="2"
+                       Source="chevron_right.png"
+                       IsVisible="False"
+                       WidthRequest="18"
+                       HeightRequest="18"/>                
             </Grid>
-        </Border>
     </ContentView.Content>
 </ContentView>
 

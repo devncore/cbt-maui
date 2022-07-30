@@ -11,7 +11,9 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <CollectionView x:Name="cvList" Grid.Row="1">
+            <CollectionView x:Name="cvList"
+                            Grid.Row="1"
+                            SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <items:TestItem/>
