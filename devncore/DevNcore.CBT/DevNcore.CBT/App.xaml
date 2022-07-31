@@ -25,7 +25,7 @@
                     <ShellContent ContentTemplate="{DataTemplate page:AboutPage}"/>
                 </Tab>
                 <Tab Title="문제" Icon="cog.png">
-                    <ShellContent ContentTemplate="{DataTemplate page:SettingPage}"/>
+                    <ShellContent ContentTemplate="{DataTemplate page:TestListPage}"/>
                 </Tab>
             </TabBar>
         </Shell>

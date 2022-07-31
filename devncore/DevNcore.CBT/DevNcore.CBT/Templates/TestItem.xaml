@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevNcore.CBT.Templates.TestItem">
+    <ContentView.Content>
+        <Border Padding="10, 4, 10, 4">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="computer.png"
+                       WidthRequest="16"
+                       HeightRequest="16"
+                       Margin="0, 0, 10, 0"/>
+                <Label Grid.Column="1"
+                       VerticalTextAlignment="Center"
+                       Text="{Binding Name}"/>
+                <RadioButton Grid.Column="2" BackgroundColor="Transparent"/>
+            </Grid>
+        </Border>
+    </ContentView.Content>
+</ContentView>
+

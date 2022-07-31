@@ -49,6 +49,8 @@
 	  <None Remove="Resources\Images\cog.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\information.svg" />
+	  <None Remove="Models\" />
+	  <None Remove="Templates\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -64,6 +66,13 @@
 	  <MauiXaml Update="Resources\Styles\Cp;prs.Dark.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Templates\TestItem.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	  <Folder Include="Templates\" />
+	</ItemGroup>
 </Project>
