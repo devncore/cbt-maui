@@ -2,11 +2,14 @@
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        InitializeComponent();
         App.Current.UserAppTheme = AppTheme.Dark;
 
-        //MainPage = new AppShell();
+        if (DeviceInfo.Idiom == DeviceIdiom.Phone)
+        {
+            Shell.Current.CurrentItem = PhoneTabs;
+        }   
     }
 }
